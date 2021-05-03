@@ -1,9 +1,11 @@
 <?
 // Страница регистрации нового пользователя 
 // Соединяемся с БД
-$link=mysqli_connect("localhost", "mysql_user", "mysql_password", "testtable"); 
+$link=mysqli_connect("localhost", "root", "root", "testtable"); 
+echo $link;
 if(isset($_POST['submit']))
 {
+    echo "  POST['submit'] ";
     $err = [];
     // проверяем логин
     if(!preg_match("/^[a-zA-Z0-9]+$/",$_POST['login']))

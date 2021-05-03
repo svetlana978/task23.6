@@ -1,7 +1,7 @@
 <?
 // Скрипт проверки 
 // Соединяемся с БД
-$link=mysqli_connect("localhost", "mysql_user", "mysql_password", "testtable");
+$link=mysqli_connect("localhost", "root", "root", "testtable");
  
 if (isset($_COOKIE['id']) and isset($_COOKIE['hash']))
 {

@@ -1,6 +1,8 @@
 $('#registration').submit(function(e) {
+    //document.write("Привет Мир!");
     e.preventDefault();
     var data = new FormData(this);
+    //document.write($data);
     $.ajax({
         type: 'POST',
         url: 'handler.php',

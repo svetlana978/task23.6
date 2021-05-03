@@ -1,6 +1,8 @@
 <?php
+
 function register(array $data)
 {
+    echo '  register ';
     $values = [
         $data['name'],
         $data['email'],
@@ -12,6 +14,7 @@ function register(array $data)
 
 function validate(array $request)
 {
+    echo ' validate  ';
     $errors = [];
     if (!isset($request['email']) || strlen($request['email']) == 0) {
         $errors[]['email'] = 'Email не указан';
@@ -41,6 +44,7 @@ function validate(array $request)
 
 function isEmailAlreadyExists(string $email)
 {
+    echo '  isEmailAlreadyExists  ';
     if (getUserByEmail($email)) {
         return true;
     }
